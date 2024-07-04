@@ -53,7 +53,7 @@ import Card from '../components/Card.astro'
 			<h2 class="text-center text-white p-2 bg-red-500 rounded-xl">CON MI PERSONA FAVORITA MI NÚMERO #1</h2>
 		</div>
 		<div class="flex justify-around items-center mt-[30px]">
-			<button id="anterio" class="hidden p-2 rounded-2xl bg-yellow-300">
+			<button id="anterior" class="hidden p-2 rounded-2xl bg-yellow-300">
 				VOLVER
 			</button>
 			<button id="siguiente" class="hidden p-2 rounded-2xl bg-green-300">
@@ -96,6 +96,7 @@ import Card from '../components/Card.astro'
 			cards[0].classList.remove('hidden')
 			cards[0].classList.add('flex')
 			siguiente.classList.remove('hidden')
+
 		},5600)
     setTimeout(()=>{
         console.log('ejecucion... 1')
@@ -105,6 +106,8 @@ import Card from '../components/Card.astro'
 	siguiente.addEventListener(('click'),()=>{
 		if(i===0){
 			console.log('me apretaste')
+			anterior.classList.remove('hidden')
+
 			i++;
 		}
 		if(i!==0){
