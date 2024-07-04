@@ -1,6 +1,18 @@
 ---
-const {img}=Astro.props
+const {img, nombre}=Astro.props
 ---
-<div>
+<div class="hidden cards">
     <img class="w-500px rounded-xl" src=`${img}` alt="imagen 1">
+    <h2>{nombre}</h2>
 </div>
+<style>
+    .cards{
+        display: none;
+    }
+</style>
+<script>
+    const cards=document.querySelectorAll('.cards')
+	setTimeout(()=>{
+			cards.classList.('hidden')
+		},5600)
+</script>
