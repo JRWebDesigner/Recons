@@ -25,4 +25,23 @@ import Layout from '../layouts/Layout.astro';
 			opacity: 1;
 		}
 	}
+	@keyframes animationDesv {
+		from{
+			opacity: 1;
+		}
+		to{
+			opacity: 0;
+		}
+	}
 </style>
+<script>
+	const principal=document.getElementById('principal')
+	setTimeout(()=>{
+			principal.classList.add('hidden')
+		},5600)
+    setTimeout(()=>{
+        console.log('ejecucion... 1')
+		principal.style.animation='1s alternate animationDesv'
+		
+    },5000)
+</script>
