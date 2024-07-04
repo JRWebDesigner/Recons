@@ -3,11 +3,26 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="flex justify-center items-center flex-wrap">
-		<h1 class="text-center text-4xl font-bold text-red-500">PARA MI PRINCESA GABY</h1>
-		<img class="w-[300px] h-[400px] rounded-3xl object-cover m-4" src="/fotos/imgprin.jpeg" alt="Foto de gaby">
+	<main class="">
+		<div id="principal" class="flex justify-center items-center flex-wrap">
+			<h1 class="text-center text-4xl font-bold text-red-500">PARA MI PRINCESA GABY</h1>
+			<img class="w-[300px] h-[400px] rounded-3xl object-cover m-4" src="/fotos/imgprin.jpeg" alt="Foto de gaby">
+		</div>
 	</main>
 </Layout>
 <style>
-
+	#principal>h1{
+		animation: 1s alternate animationPrinc;
+	}
+	#principal>img{
+		animation: 5s alternate animationPrinc;
+	}
+	@keyframes animationPrinc {
+		from{
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+		}
+	}
 </style>
