@@ -23,7 +23,7 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 
 		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img3.jpeg" alt="imagen 2">
+			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img3-1.jpeg" alt="imagen 2">
 			<h2 class="text-center text-white p-2 bg-red-500 rounded-xl">UNO MÁS PORQUE SÍ</h2>
 		</div>
 
@@ -43,7 +43,7 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 		
 		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/img6.jpeg" />
+			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/SunsetBives.jpeg" />
 			<h2 class="text-center text-white p-2 bg-red-500 rounded-xl">SUNSET VIBES</h2>
 		</div>
 
@@ -104,15 +104,22 @@ import Layout from '../layouts/Layout.astro';
 	let i=0;
 	siguiente.addEventListener(('click'),()=>{
 		if(i===0){
-			console.log('me apretaste')
+			i++
 			anterior.classList.remove('hidden')
-			i++;
+			cards[i-1].classList.remove('flex')
+			cards[i-1].classList.add('hidden')
+			cards[i].classList.remove('hidden')
+			cards[i].classList.add('flex')
+			return 
 		}
-		if(i!==0){
-			i++;
+		
+		if(i!==0 && i<cards.length){
+			i++
+			cards[i-1].classList.remove('flex')
+			cards[i-1].classList.add('hidden')
+			cards[i].classList.remove('hidden')
+			cards[i].classList.add('flex')
 		}
 	})
 	
-	
-
 </script>
