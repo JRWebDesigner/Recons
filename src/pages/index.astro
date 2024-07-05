@@ -32,12 +32,12 @@ import Cards from "../components/Cards.astro";
 			src="/fondoCorazon.png"
 			alt="fondo corazon"
 		/>
-		<div id="titulo"  class=" hidden flex justify-center items-center">
+		<div id="titulo"  class=" hidden  justify-center items-center">
 			<h1 class="text-center text-4xl font-bold text-red-100">
 				PARA MI PRINCESA GABY
 			</h1>
 		</div>
-		<div id="principal" class="hidden flex justify-center items-center flex-wrap">
+		<div id="principal" class="hidden justify-center items-center flex-wrap">
 			<img
 				class="w-[300px] h-[400px] rounded-3xl object-cover m-4"
 				src="/fotos/imgprin.jpeg"
@@ -68,7 +68,7 @@ import Cards from "../components/Cards.astro";
 			nombre="CON MI PERSONA FAVORITA MI NÚMERO #1"
 		/>
 		<div
-			class="tequiero w-[90%] hidden grid rounded-3xl place-items-center gap-3"
+			class="tequiero w-[90%] hidden rounded-3xl place-items-center gap-3"
 		>
 			<div class="bg-[#da097c7c] relative rounded-xl">
 				<img
@@ -279,7 +279,11 @@ import Cards from "../components/Cards.astro";
 	empezar.addEventListener("click", () => {
 		
 		titulo.classList.remove('hidden')
+		titulo.classList.add('flex')
+
 		principal.classList.remove('hidden')
+		principal.classList.add('flex')
+
 
 		listo.classList.add("hidden");
 		empezar.classList.add("hidden");
