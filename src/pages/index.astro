@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Cards from '../components/Cards.astro'
 ---
 
 <Layout>
@@ -8,23 +9,24 @@ import Layout from '../layouts/Layout.astro';
 			<h1 class="text-center text-4xl font-bold text-white">PARA MI PRINCESA GABY</h1>
 			<img class="w-[300px] h-[400px] rounded-3xl object-cover m-4" src="/fotos/imgprin.jpeg" alt="Foto de gaby">
 		</div>
+		<!-- 
 		<div class="cards hidden justify-center items-center flex-col gap-7">
 			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img1.jpeg" alt="imagen 1">
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">CUANDO EMPEZAMOS A SALIR</h2>
+			<h2 class="text-center text-white p-2 bg-red-400 rounded-2xl"></h2>
 		</div>
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img2.jpeg" alt="imagen 2">
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">EN EL AVIÓN EN NUESTRO PRIMER VUELO</h2>
+		<div class="cards hidden justify-center items-center flex-col">
+			<img class="w-[300px] h-[400px] rounded-xl object-cover shadow-lg shadow-red-500" src="/fotos/img2.jpeg" alt="imagen 2">
+			<h2 class="text-center w-[300px] text-white p-2 bg-red-400 rounded-br-xl rounded-bl-xl shadow-lg shadow-red-500"></h2>
 		</div>
 
 		<div class="cards hidden justify-center items-center flex-col gap-7">
 			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img3.jpeg" alt="imagen 2">
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">EL VIAJE QUE NOS UNIÓ</h2>
+			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
 		</div>
 
 		<div class="cards hidden justify-center items-center flex-col gap-7">
 			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img3-1.jpeg" alt="imagen 2">
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">UNO MÁS PORQUE SÍ</h2>
+			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
 		</div>
 
 		<div class="cards hidden justify-center items-center flex-col gap-7">
@@ -39,7 +41,7 @@ import Layout from '../layouts/Layout.astro';
 
 		<div class="cards hidden justify-center items-center flex-col gap-7">
 			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/img6.jpeg" />
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">RECUERDO DE FELICIDAD PLENA</h2>
+			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
 		</div>
 		
 		<div class="cards hidden justify-center items-center flex-col gap-7">
@@ -49,8 +51,21 @@ import Layout from '../layouts/Layout.astro';
 
 		<div class="cards hidden justify-center items-center flex-col gap-7">
 			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/imgFin.jpeg" />
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">CON MI PERSONA FAVORITA MI NÚMERO #1</h2>
+			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
 		</div>
+		--> 
+		<Cards  img="img1.jpeg"    nombre="CUANDO EMPEZAMOS A SALIR" />
+		<Cards  img="img2.jpeg"    nombre="EN EL AVIÓN EN NUESTRO PRIMER VUELO" />
+		<Cards  img="img3.jpeg"    nombre="EL VIAJE QUE NOS UNIÓ" />
+		<Cards  img="img3-1.jpeg"    nombre="UNO MÁS PORQUE SÍ" />
+		<div class="cards hidden justify-center items-center flex-col">
+			<video class="w-[300px] h-[400px] rounded-xl shadow-lg shadow-red-500" controls autoplay src="/fotos/img5.mp4"></video>
+			<h2 class="text-center w-[300px] text-white p-2 bg-red-400 rounded-br-xl rounded-bl-xl shadow-lg shadow-red-500">SIENDO SIMPLEMENTE NOSOTROS</h2>
+		</div>
+		<Cards  img="imgCumple.jpeg"    nombre="CUMPLEAÑOS DE MI PRINCESA" />
+		<Cards  img="img6.jpeg"    nombre="RECUERDO DE FELICIDAD PLENA" />
+		<Cards  img="SunsetBives.jpeg"    nombre="SUNSET VIBES" />
+		<Cards  img="imgFin.jpeg"    nombre="CON MI PERSONA FAVORITA MI NÚMERO #1" />
 		<div class="flex justify-around items-center mt-[30px]">
 			<button id="anterior" class="hidden p-2 rounded-2xl bg-yellow-300">
 				VOLVER
@@ -67,6 +82,9 @@ import Layout from '../layouts/Layout.astro';
 	}
 	#principal>img{
 		animation: 5s alternate animationPrinc;
+	}
+	.CardsAparece{
+		animation: 2.2s alternate animationPrinc;
 	}
 	@keyframes animationPrinc {
 		from{
@@ -90,18 +108,17 @@ import Layout from '../layouts/Layout.astro';
 	const cards=document.querySelectorAll('.cards')
 	const anterior = document.getElementById('anterior')
 	const siguiente = document.getElementById('siguiente')
+
 	setTimeout(()=>{
 			principal.classList.add('hidden')
 			cards[0].classList.remove('hidden')
 			cards[0].classList.add('flex')
 			siguiente.classList.remove('hidden')
-
 		},5600)
     setTimeout(()=>{
         console.log('ejecucion... 1')
 		principal.style.animation='1s alternate animationDesv'
     },5000)
-	console.log(cards)
 	let i=0;
 	siguiente.addEventListener(('click'),()=>{
 		if(i===0){
@@ -111,6 +128,7 @@ import Layout from '../layouts/Layout.astro';
 			cards[i-1].classList.add('hidden')
 			cards[i].classList.remove('hidden')
 			cards[i].classList.add('flex')
+			cards[i].classList.add('CardsAparece')
 			return 
 		}
 		
@@ -120,6 +138,8 @@ import Layout from '../layouts/Layout.astro';
 			cards[i-1].classList.add('hidden')
 			cards[i].classList.remove('hidden')
 			cards[i].classList.add('flex')
+			cards[i].classList.add('CardsAparece')
+
 		}
 		if(i===8){
 			siguiente.classList.add('hidden')
@@ -132,6 +152,8 @@ import Layout from '../layouts/Layout.astro';
 			cards[i+1].classList.add('hidden')
 			cards[i].classList.remove('hidden')
 			cards[i].classList.add('flex')
+			cards[i].classList.add('CardsAparece')
+			
 			if(i===0){
 				anterior.classList.add('hidden')
 			}
