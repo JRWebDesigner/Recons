@@ -5,7 +5,12 @@ import Cards from "../components/Cards.astro";
 
 <Layout>
 	<main class="w-full h-full grid place-items-center">
-		<img id="corazones" class="absolute -z-20 h-full w-full object-cover opacity-50" src="/fondoCorazon.png" alt="fondo corazon">
+		<img
+			id="corazones"
+			class="absolute -z-20 h-full w-full object-cover opacity-50"
+			src="/fondoCorazon.png"
+			alt="fondo corazon"
+		/>
 		<div class="flex justify-center items-center">
 			<h1 class="text-center text-4xl font-bold text-red-100">
 				PARA MI PRINCESA GABY
@@ -41,29 +46,73 @@ import Cards from "../components/Cards.astro";
 			img="imgFin.jpeg"
 			nombre="CON MI PERSONA FAVORITA MI NÚMERO #1"
 		/>
-		<div class="tequiero w-[90%] hidden grid rounded-3xl place-items-center gap-3">
+		<div
+			class="tequiero w-[90%] hidden grid rounded-3xl place-items-center gap-3"
+		>
 			<div class="bg-[#29072b83] relative rounded-xl">
-				<img class="w-full h-full absolute -z-10 object-cover opacity-60  rounded-3xl" src="/fotos/imagFondo.jpeg" alt="fondo foto">
-				<p class="text-center rounded-xl p-10 text-lg font-black text-white" >
-					Te elegí a ti... porque eres la persona que me hace feliz, eres la
-					persona que siempre tengo en mi mente a cada minuto. Por la cual me
-					arriesgué a decirle todo lo que sentía y no me importó nada de nada.
-					Eres tú la persona por quien mi corazón late todos los días.  Eres tú
-					mi primer pensamiento al despertar. siempre me pregunto que estás
-					haciendo, en dónde estarás.... Eres tú la persona por la que me
-					muero de celos si te miran o te dicen cosas. La persona por la que
+				<img
+					class="w-full h-full absolute -z-10 object-cover opacity-60 rounded-3xl"
+					src="/fotos/imagFondo.jpeg"
+					alt="fondo foto"
+				/>
+				<p
+					class="text-center rounded-xl p-10 text-lg font-black text-white"
+				>
+					Te elegí a ti... porque eres la persona que me hace feliz,
+					eres la persona que siempre tengo en mi mente a cada minuto.
+					Por la cual me arriesgué a decirle todo lo que sentía y no
+					me importó nada de nada. Eres tú la persona por quien mi
+					corazón late todos los días. Eres tú mi primer pensamiento
+					al despertar. siempre me pregunto que estás haciendo, en
+					dónde estarás.... Eres tú la persona por la que me muero de
+					celos si te miran o te dicen cosas. La persona por la que
 					seguiría a pesar de todo eres tú. No me importa nada, no te
 					cambiaría por nada ni por nadie
 				</p>
 			</div>
 			<div class="bg-[#c741ce83] relative rounded-xl">
-				<img class="w-full h-full absolute -z-10 object-cover opacity-60  rounded-3xl" src="/fotos/SunsetBives.jpeg" alt="fondo foto">
-				<p class="text-center rounded-xl p-10 text-lg font-black text-white" >
-					Quizás no sea la peksona perfecta para ti, cometo errores, tengo miles de defectos; pero, hago lo posible por enamorarte, por hacerte feliz, dia a dia me esfuerzo por darte lo mejor de mi, para que te sientas bien y te sientas feliz junto a mi
+				<img
+					class="w-full h-full absolute -z-10 object-cover opacity-60 rounded-3xl"
+					src="/fotos/SunsetBives.jpeg"
+					alt="fondo foto"
+				/>
+				<p
+					class="text-center rounded-xl p-10 text-lg font-black text-white"
+				>
+					Quizás no sea la persona perfecta para ti, cometo errores,
+					tengo miles de defectos pero, hago lo posible por
+					enamorarte, por hacerte feliz, dia a dia me esfuerzo por
+					darte lo mejor de mi, para que te sientas bien y te sientas
+					feliz junto a mi
 				</p>
 			</div>
 		</div>
-		<div class="flex justify-around items-center w-full font-semibold flex-wrap">
+		<div id="opciones" class="place-items-center gap-4 hidden">
+			<h2
+				class="text-center font-black text-white text-3xl p-2 bg-red-300 w-[300px] rounded-xl"
+			>
+				Elije una opción
+			</h2>
+			<div class="grid place-items-center gap-5 text-white font-black">
+				<button id="opcion1" class="text-4xl p-2 rounded-lg bg-rose-500 w-[400px]"
+					>OPCIÓN 1</button
+				><button id="opcion2" class="text-4xl p-2 rounded-lg bg-rose-500 w-[400px]"
+					>OPCIÓN 2</button
+				><button id="opcion3" class="text-4xl p-2 rounded-lg bg-rose-500 w-[400px]"
+					>OPCIÓN 3</button
+				>
+			</div>
+		</div>
+
+			<div id="moduloOpcion1" class="hidden text-3xl font-black text-white p-6 w-[70%] h-[200px] rounded-xl bg-yellow-300 justify-center items-center">
+				ESTO ES VALIDO PARA UN NUEVO CASE Y SU PROTECTOR DE PANTALLA
+			</div>
+			<div id="moduloOpcion2" class="hidden text-3xl font-black text-white p-6 w-[70%] h-[200px] rounded-xl bg-rose-300 justify-center items-center">CENA ESPECIAL SORPRESA</div>
+			<div id="moduloOpcion3" class="hidden text-3xl font-black text-white p-6 w-[70%] h-[200px] rounded-xl bg-blue-300 justify-center items-center">REGALO	MISTERIOSO</div>
+
+		<div
+			class="flex justify-around items-center w-full font-semibold flex-wrap"
+		>
 			<button id="quieres" class="hidden p-2 rounded-2xl bg-green-300">
 				¿QUIERES SABER POR QUE TE QUIERO?😉🫣
 			</button>
@@ -73,12 +122,14 @@ import Cards from "../components/Cards.astro";
 			<button id="siguiente" class="hidden p-2 rounded-2xl bg-green-300">
 				SIGUIENTE
 			</button>
-			
 		</div>
+		<button id="volverInicio" class="hidden bg-rose-400 text-2xl font-black rounded-lg p-2">
+			<a href="/">VOLVER AL INICIO</a>
+		</button>
 	</main>
 </Layout>
 <style>
-	#corazones{
+	#corazones {
 		animation: 6s alternate animationPrincC;
 	}
 	#principal > h1 {
@@ -90,7 +141,7 @@ import Cards from "../components/Cards.astro";
 	.CardsAparece {
 		animation: 2.2s alternate animationPrinc;
 	}
-	@keyframes animationPrincC{
+	@keyframes animationPrincC {
 		from {
 			opacity: 0;
 		}
@@ -122,7 +173,14 @@ import Cards from "../components/Cards.astro";
 	const siguiente = document.getElementById("siguiente");
 	const quieres = document.getElementById("quieres");
 	const tequiero = document.querySelector(".tequiero");
-
+	const opciones = document.getElementById("opciones");
+	const opcion1 = document.getElementById('opcion1')
+	const opcion2 = document.getElementById('opcion2')
+	const opcion3 = document.getElementById('opcion3')
+	const volverInicio = document.getElementById('volverInicio')
+	const modulOpcion1 = document.getElementById('moduloOpcion1')
+	const modulOpcion2 = document.getElementById('moduloOpcion2')
+	const modulOpcion3 = document.getElementById('moduloOpcion3')
 	setTimeout(() => {
 		principal.classList.add("hidden");
 		cards[0].classList.remove("hidden");
@@ -130,13 +188,14 @@ import Cards from "../components/Cards.astro";
 		siguiente.classList.remove("hidden");
 	}, 5600);
 	setTimeout(() => {
-		console.log("ejecucion... 1");
 		principal.style.animation = "1s alternate animationDesv";
 	}, 5000);
 	let i = 0;
 	siguiente.addEventListener("click", () => {
 		if (i === 0) {
 			i++;
+		console.log('primero = ',i);
+
 			anterior.classList.remove("hidden");
 			cards[i - 1].classList.remove("flex");
 			cards[i - 1].classList.add("hidden");
@@ -148,6 +207,8 @@ import Cards from "../components/Cards.astro";
 
 		if (i !== 0 && i < 9) {
 			i++;
+		console.log('continuacion = ',i);
+
 			cards[i - 1].classList.remove("flex");
 			cards[i - 1].classList.add("hidden");
 			cards[i].classList.remove("hidden");
@@ -158,10 +219,21 @@ import Cards from "../components/Cards.astro";
 			siguiente.classList.add("hidden");
 			quieres.classList.remove("hidden");
 		}
+		if (i === 9) {
+			i++
+			console.log(i)
+			opciones.classList.remove("hidden");
+			opciones.classList.add("grid");
+			tequiero.classList.add("hidden");
+			volverInicio.classList.remove('hidden')
+		siguiente.classList.add("hidden");
+		anterior.classList.add('hidden')
+		}
 	});
 	anterior.addEventListener("click", () => {
-		if (i < 9 && i > 0) {
+		if (i > 0 && i<=10) {
 			i = i - 1;
+		console.log('anterior =',i)
 			cards[i + 1].classList.remove("flex");
 			cards[i + 1].classList.add("hidden");
 			cards[i].classList.remove("hidden");
@@ -169,8 +241,7 @@ import Cards from "../components/Cards.astro";
 			cards[i].classList.add("CardsAparece");
 			for (let index = 0; index < quieres.classList.length; index++) {
 				const element = quieres.classList[index];
-				if(element === 'flex'){
-
+				if (element === "flex") {
 				}
 			}
 			if (i === 0) {
@@ -179,19 +250,44 @@ import Cards from "../components/Cards.astro";
 			if (i === 7) {
 				siguiente.classList.remove("hidden");
 				tequiero.classList.add("hidden");
-				quieres.classList.add('hidden')
-				
+				quieres.classList.add("hidden");
 			}
 			if (i === 8) {
 				tequiero.classList.add("hidden");
+				opciones.classList.add("hidden");
+				opciones.classList.remove("grid");
+			}
+			if(i===9){
+				tequiero.classList.remove("hidden");
 			}
 		}
+		
 	});
 	quieres.addEventListener("click", () => {
-		quieres.classList.add("hidden");
 		cards[i].classList.add("hidden");
 		cards[i].classList.remove("flex");
+		i++;
+		quieres.classList.add("hidden");
 		console.log(i);
 		tequiero.classList.remove("hidden");
+		siguiente.classList.remove("hidden");
 	});
+	opcion1.addEventListener(('click'),()=>{
+		opciones.classList.add("hidden");
+		opciones.classList.remove("grid");
+		modulOpcion1.classList.remove('hidden')
+		modulOpcion1.classList.add('flex')
+	})
+	opcion2.addEventListener(('click'),()=>{
+		opciones.classList.add("hidden");
+		opciones.classList.remove("grid");
+		modulOpcion2.classList.remove('hidden')
+		modulOpcion2.classList.add('flex')
+	})
+	opcion3.addEventListener(('click'),()=>{
+		opciones.classList.add("hidden");
+		opciones.classList.remove("grid");
+		modulOpcion3.classList.remove('hidden')
+		modulOpcion3.classList.add('flex')
+	})
 </script>
