@@ -1,166 +1,176 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Cards from '../components/Cards.astro'
+import Layout from "../layouts/Layout.astro";
+import Cards from "../components/Cards.astro";
 ---
 
 <Layout>
-	<main class="">
+	<main class="w-full h-full grid place-items-center">
+		<div class="flex justify-center items-center">
+			<h1 class="text-center text-4xl font-bold text-red-100">
+				PARA MI PRINCESA GABY
+			</h1>
+		</div>
 		<div id="principal" class="flex justify-center items-center flex-wrap">
-			<h1 class="text-center text-4xl font-bold text-white">PARA MI PRINCESA GABY</h1>
-			<img class="w-[300px] h-[400px] rounded-3xl object-cover m-4" src="/fotos/imgprin.jpeg" alt="Foto de gaby">
+			<img
+				class="w-[300px] h-[400px] rounded-3xl object-cover m-4"
+				src="/fotos/imgprin.jpeg"
+				alt="Foto de gaby"
+			/>
 		</div>
-		<!-- 
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img1.jpeg" alt="imagen 1">
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-2xl"></h2>
-		</div>
+		<Cards img="img1.jpeg" nombre="CUANDO EMPEZAMOS A SALIR" />
+		<Cards img="img2.jpeg" nombre="EN EL AVIÓN EN NUESTRO PRIMER VUELO" />
+		<Cards img="img3.jpeg" nombre="EL VIAJE QUE NOS UNIÓ" />
+		<Cards img="img3-1.jpeg" nombre="UNO MÁS PORQUE SÍ" />
 		<div class="cards hidden justify-center items-center flex-col">
-			<img class="w-[300px] h-[400px] rounded-xl object-cover shadow-lg shadow-red-500" src="/fotos/img2.jpeg" alt="imagen 2">
-			<h2 class="text-center w-[300px] text-white p-2 bg-red-400 rounded-br-xl rounded-bl-xl shadow-lg shadow-red-500"></h2>
+			<video
+				class="w-[300px] h-[400px] rounded-xl shadow-lg shadow-red-500"
+				controls
+				autoplay
+				src="/fotos/img5.mp4"></video>
+			<h2
+				class="text-center w-[300px] text-white p-2 bg-red-400 rounded-br-xl rounded-bl-xl shadow-lg shadow-red-500"
+			>
+				SIENDO SIMPLEMENTE NOSOTROS
+			</h2>
 		</div>
-
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img3.jpeg" alt="imagen 2">
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
+		<Cards img="imgCumple.jpeg" nombre="CUMPLEAÑOS DE MI PRINCESA" />
+		<Cards img="img6.jpeg" nombre="RECUERDO DE FELICIDAD PLENA" />
+		<Cards img="SunsetBives.jpeg" nombre="SUNSET VIBES" />
+		<Cards
+			img="imgFin.jpeg"
+			nombre="CON MI PERSONA FAVORITA MI NÚMERO #1"
+		/>
+		<div class="tequiero hidden p-10  shadow-sm shadow-red-300">
+			<p class="text-center rounded-xl bg-[#82098670] p-2 text-2xl font-bold text-white" >
+				Te elegí a ti... porque eres la persona que me hace feliz, eres la
+				persona que siempre tengo en mi mente a cada minuto. Por la cual me
+				arriesgué a decirle todo lo que sentía y no me importó nada de nada.
+				Eres tú la persona por quien mi corazón late todos los días.  Eres tú
+				mi primer pensamiento al despertar. siempre me pregunto que estás
+				haciendo, en dónde estarás.... Eres tú la persona por la que me
+				muero de celos si te miran o te dicen cosas. La persona por la que
+				seguiría a pesar de todo eres tú. No me importa nada, no te
+				cambiaría por nada ni por nadie
+			</p>
+			
 		</div>
-
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl object-cover" src="/fotos/img3-1.jpeg" alt="imagen 2">
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
-		</div>
-
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<video class="w-[300px] h-[400px] rounded-xl" controls autoplay src="/fotos/img5.mp4"></video>
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">SIENDO SIMPLEMENTE NOSOTROS</h2>
-		</div>
-
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/imgCumple.jpeg" />
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">CUMPLEAÑOS DE MI PRINCESA</h2>
-		</div>
-
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/img6.jpeg" />
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
-		</div>
-		
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/SunsetBives.jpeg" />
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl">SUNSET VIBES</h2>
-		</div>
-
-		<div class="cards hidden justify-center items-center flex-col gap-7">
-			<img class="w-[300px] h-[400px] rounded-xl" src="/fotos/imgFin.jpeg" />
-			<h2 class="text-center text-white p-2 bg-red-400 rounded-xl"></h2>
-		</div>
-		--> 
-		<Cards  img="img1.jpeg"    nombre="CUANDO EMPEZAMOS A SALIR" />
-		<Cards  img="img2.jpeg"    nombre="EN EL AVIÓN EN NUESTRO PRIMER VUELO" />
-		<Cards  img="img3.jpeg"    nombre="EL VIAJE QUE NOS UNIÓ" />
-		<Cards  img="img3-1.jpeg"    nombre="UNO MÁS PORQUE SÍ" />
-		<div class="cards hidden justify-center items-center flex-col">
-			<video class="w-[300px] h-[400px] rounded-xl shadow-lg shadow-red-500" controls autoplay src="/fotos/img5.mp4"></video>
-			<h2 class="text-center w-[300px] text-white p-2 bg-red-400 rounded-br-xl rounded-bl-xl shadow-lg shadow-red-500">SIENDO SIMPLEMENTE NOSOTROS</h2>
-		</div>
-		<Cards  img="imgCumple.jpeg"    nombre="CUMPLEAÑOS DE MI PRINCESA" />
-		<Cards  img="img6.jpeg"    nombre="RECUERDO DE FELICIDAD PLENA" />
-		<Cards  img="SunsetBives.jpeg"    nombre="SUNSET VIBES" />
-		<Cards  img="imgFin.jpeg"    nombre="CON MI PERSONA FAVORITA MI NÚMERO #1" />
-		<div class="flex justify-around items-center mt-[30px]">
+		<div class="flex justify-around items-center mt-[20px] w-full font-semibold">
 			<button id="anterior" class="hidden p-2 rounded-2xl bg-yellow-300">
 				VOLVER
 			</button>
 			<button id="siguiente" class="hidden p-2 rounded-2xl bg-green-300">
 				SIGUIENTE
 			</button>
+			<button id="quieres" class="hidden p-2 rounded-2xl bg-green-300">
+				¿QUIERES SABER POR QUE TE QUIERO?😉🫣
+			</button>
 		</div>
 	</main>
 </Layout>
 <style>
-	#principal>h1{
+	#principal > h1 {
 		animation: 1s alternate animationPrinc;
 	}
-	#principal>img{
+	#principal > img {
 		animation: 5s alternate animationPrinc;
 	}
-	.CardsAparece{
+	.CardsAparece {
 		animation: 2.2s alternate animationPrinc;
 	}
 	@keyframes animationPrinc {
-		from{
+		from {
 			opacity: 0;
 		}
-		to{
+		to {
 			opacity: 1;
 		}
 	}
 	@keyframes animationDesv {
-		from{
+		from {
 			opacity: 1;
 		}
-		to{
+		to {
 			opacity: 0;
 		}
 	}
 </style>
 <script>
-	const principal=document.getElementById('principal')
-	const cards=document.querySelectorAll('.cards')
-	const anterior = document.getElementById('anterior')
-	const siguiente = document.getElementById('siguiente')
+	const principal = document.getElementById("principal");
+	const cards = document.querySelectorAll(".cards");
+	const anterior = document.getElementById("anterior");
+	const siguiente = document.getElementById("siguiente");
+	const quieres = document.getElementById("quieres");
+	const tequiero = document.querySelector(".tequiero");
 
-	setTimeout(()=>{
-			principal.classList.add('hidden')
-			cards[0].classList.remove('hidden')
-			cards[0].classList.add('flex')
-			siguiente.classList.remove('hidden')
-		},5600)
-    setTimeout(()=>{
-        console.log('ejecucion... 1')
-		principal.style.animation='1s alternate animationDesv'
-    },5000)
-	let i=0;
-	siguiente.addEventListener(('click'),()=>{
-		if(i===0){
-			i++
-			anterior.classList.remove('hidden')
-			cards[i-1].classList.remove('flex')
-			cards[i-1].classList.add('hidden')
-			cards[i].classList.remove('hidden')
-			cards[i].classList.add('flex')
-			cards[i].classList.add('CardsAparece')
-			return 
+	setTimeout(() => {
+		principal.classList.add("hidden");
+		cards[0].classList.remove("hidden");
+		cards[0].classList.add("flex");
+		siguiente.classList.remove("hidden");
+	}, 5600);
+	setTimeout(() => {
+		console.log("ejecucion... 1");
+		principal.style.animation = "1s alternate animationDesv";
+	}, 5000);
+	let i = 0;
+	siguiente.addEventListener("click", () => {
+		if (i === 0) {
+			i++;
+			anterior.classList.remove("hidden");
+			cards[i - 1].classList.remove("flex");
+			cards[i - 1].classList.add("hidden");
+			cards[i].classList.remove("hidden");
+			cards[i].classList.add("flex");
+			cards[i].classList.add("CardsAparece");
+			return;
 		}
-		
-		if(i!==0 && i<9){
-			i++
-			cards[i-1].classList.remove('flex')
-			cards[i-1].classList.add('hidden')
-			cards[i].classList.remove('hidden')
-			cards[i].classList.add('flex')
-			cards[i].classList.add('CardsAparece')
 
+		if (i !== 0 && i < 9) {
+			i++;
+			cards[i - 1].classList.remove("flex");
+			cards[i - 1].classList.add("hidden");
+			cards[i].classList.remove("hidden");
+			cards[i].classList.add("flex");
+			cards[i].classList.add("CardsAparece");
 		}
-		if(i===8){
-			siguiente.classList.add('hidden')
+		if (i === 8) {
+			siguiente.classList.add("hidden");
+			quieres.classList.remove("hidden");
 		}
-	})
-	anterior.addEventListener(('click'),()=>{
-		if(i<9 && i>0){
-			i=i-1
-			cards[i+1].classList.remove('flex')
-			cards[i+1].classList.add('hidden')
-			cards[i].classList.remove('hidden')
-			cards[i].classList.add('flex')
-			cards[i].classList.add('CardsAparece')
-			
-			if(i===0){
-				anterior.classList.add('hidden')
+	});
+	anterior.addEventListener("click", () => {
+		if (i < 9 && i > 0) {
+			i = i - 1;
+			cards[i + 1].classList.remove("flex");
+			cards[i + 1].classList.add("hidden");
+			cards[i].classList.remove("hidden");
+			cards[i].classList.add("flex");
+			cards[i].classList.add("CardsAparece");
+
+			if (i === 0) {
+				anterior.classList.add("hidden");
 			}
-			if(i===7){
-			siguiente.classList.remove('hidden')
+			if (i === 7) {
+				siguiente.classList.remove("hidden");
+				tequiero.classList.add("hidden");
+				quieres.addEventListener("click", () => {
+					quieres.classList.add("hidden");
+					cards[i].classList.add("hidden");
+					cards[i].classList.remove("flex");
+					console.log(i);
+					tequiero.classList.remove("hidden");
+				});
+			}
+			if (i === 8) {
+				tequiero.classList.add("hidden");
+			}
 		}
-		}
-		
-	})
+	});
+	quieres.addEventListener("click", () => {
+		quieres.classList.add("hidden");
+		cards[i].classList.add("hidden");
+		cards[i].classList.remove("flex");
+		console.log(i);
+		tequiero.classList.remove("hidden");
+	});
 </script>
