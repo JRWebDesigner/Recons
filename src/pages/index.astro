@@ -40,30 +40,39 @@ import Cards from "../components/Cards.astro";
 			img="imgFin.jpeg"
 			nombre="CON MI PERSONA FAVORITA MI NÚMERO #1"
 		/>
-		<div class="tequiero hidden p-10  shadow-sm shadow-red-300">
-			<p class="text-center rounded-xl bg-[#82098625] p-2 text-2xl font-bold text-white" >
-				Te elegí a ti... porque eres la persona que me hace feliz, eres la
-				persona que siempre tengo en mi mente a cada minuto. Por la cual me
-				arriesgué a decirle todo lo que sentía y no me importó nada de nada.
-				Eres tú la persona por quien mi corazón late todos los días.  Eres tú
-				mi primer pensamiento al despertar. siempre me pregunto que estás
-				haciendo, en dónde estarás.... Eres tú la persona por la que me
-				muero de celos si te miran o te dicen cosas. La persona por la que
-				seguiría a pesar de todo eres tú. No me importa nada, no te
-				cambiaría por nada ni por nadie
-			</p>
-			
+		<div class="tequiero w-[80%] hidden grid rounded-3xl place-items-center gap-3">
+			<div class="bg-[#29072b83] relative rounded-xl">
+				<img class="w-full h-full absolute -z-10 object-contain opacity-60  rounded-3xl" src="/fotos/imagFondo.jpeg" alt="fondo foto">
+				<p class="text-center rounded-xl  p-20 text-2xl font-black text-white" >
+					Te elegí a ti... porque eres la persona que me hace feliz, eres la
+					persona que siempre tengo en mi mente a cada minuto. Por la cual me
+					arriesgué a decirle todo lo que sentía y no me importó nada de nada.
+					Eres tú la persona por quien mi corazón late todos los días.  Eres tú
+					mi primer pensamiento al despertar. siempre me pregunto que estás
+					haciendo, en dónde estarás.... Eres tú la persona por la que me
+					muero de celos si te miran o te dicen cosas. La persona por la que
+					seguiría a pesar de todo eres tú. No me importa nada, no te
+					cambiaría por nada ni por nadie
+				</p>
+			</div>
+			<div class="bg-[#c741ce83] relative rounded-xl">
+				<img class="w-full h-full absolute -z-10 object-cover opacity-60  rounded-3xl" src="/fotos/SunsetBives.jpeg" alt="fondo foto">
+				<p class="text-center rounded-xl  p-20 text-2xl font-black text-white" >
+					Quizás no sea la peksona perfecta para ti, cometo errores, tengo miles de defectos; pero, hago lo posible por enamorarte, por hacerte feliz, dia a dia me esfuerzo por darte lo mejor de mi, para que te sientas bien y te sientas feliz junto a mi
+				</p>
+			</div>
 		</div>
 		<div class="flex justify-around items-center w-full font-semibold flex-wrap">
+			<button id="quieres" class="hidden p-2 rounded-2xl bg-green-300">
+				¿QUIERES SABER POR QUE TE QUIERO?😉🫣
+			</button>
 			<button id="anterior" class="hidden p-2 rounded-2xl bg-yellow-300">
 				VOLVER
 			</button>
 			<button id="siguiente" class="hidden p-2 rounded-2xl bg-green-300">
 				SIGUIENTE
 			</button>
-			<button id="quieres" class="hidden p-2 rounded-2xl bg-green-300">
-				¿QUIERES SABER POR QUE TE QUIERO?😉🫣
-			</button>
+			
 		</div>
 	</main>
 </Layout>
@@ -152,6 +161,7 @@ import Cards from "../components/Cards.astro";
 			}
 			if (i === 7) {
 				siguiente.classList.remove("hidden");
+
 				tequiero.classList.add("hidden");
 				quieres.addEventListener("click", () => {
 					quieres.classList.add("hidden");
