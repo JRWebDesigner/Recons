@@ -123,9 +123,16 @@ import Cards from "../components/Cards.astro";
 				SIGUIENTE
 			</button>
 		</div>
-		<button id="volverInicio" class="hidden bg-rose-400 text-2xl font-black rounded-lg p-2">
-			<a href="/">VOLVER AL INICIO</a>
-		</button>
+		<div  id="volverInicio" class="hidden flex-wrap-reverse justify-around w-[90%]">
+			<button class="bg-rose-400 text-xl text-rose-200 font-black rounded-lg p-2">
+				<a href="/">VOLVER AL INICIO</a>
+			</button>
+			<button class="bg-rose-400 text-2xl text-white font-black rounded-lg p-2">
+				<a href="/Carta">
+					------- 💌 -------
+				</a>
+			</button>
+		</div>
 	</main>
 </Layout>
 <style>
@@ -181,6 +188,7 @@ import Cards from "../components/Cards.astro";
 	const modulOpcion1 = document.getElementById('moduloOpcion1')
 	const modulOpcion2 = document.getElementById('moduloOpcion2')
 	const modulOpcion3 = document.getElementById('moduloOpcion3')
+
 	setTimeout(() => {
 		principal.classList.add("hidden");
 		cards[0].classList.remove("hidden");
@@ -225,7 +233,8 @@ import Cards from "../components/Cards.astro";
 			opciones.classList.remove("hidden");
 			opciones.classList.add("grid");
 			tequiero.classList.add("hidden");
-			volverInicio.classList.remove('hidden')
+			
+
 		siguiente.classList.add("hidden");
 		anterior.classList.add('hidden')
 		}
@@ -277,17 +286,23 @@ import Cards from "../components/Cards.astro";
 		opciones.classList.remove("grid");
 		modulOpcion1.classList.remove('hidden')
 		modulOpcion1.classList.add('flex')
+		volverInicio.classList.remove('hidden')
+			volverInicio.classList.add('flex')
 	})
 	opcion2.addEventListener(('click'),()=>{
 		opciones.classList.add("hidden");
 		opciones.classList.remove("grid");
 		modulOpcion2.classList.remove('hidden')
 		modulOpcion2.classList.add('flex')
+		volverInicio.classList.remove('hidden')
+			volverInicio.classList.add('flex')
 	})
 	opcion3.addEventListener(('click'),()=>{
 		opciones.classList.add("hidden");
 		opciones.classList.remove("grid");
 		modulOpcion3.classList.remove('hidden')
 		modulOpcion3.classList.add('flex')
+		volverInicio.classList.remove('hidden')
+		volverInicio.classList.add('flex')
 	})
 </script>
