@@ -3,20 +3,30 @@ import Layout from '../layouts/Layout.astro'
 ---
 <Layout>
     <main class="w-[100%] h-[100vh] grid place-items-center">
-        <div class="p-10 text-white">
-            <h1 class="text-3xl font-black mb-4">
+        <img
+			id="corazones"
+			class="absolute -z-20 h-full w-full object-cover opacity-50"
+			src="/fondoCorazon.png"
+			alt="fondo corazon"
+		/>
+        <div class="p-10 w-[80%] bg-[#00000017] rounded-lg">
+            <h1 class="text-3xl font-black m-6">
                 Invitación
             </h1>
-            <p class="text-center text-xl font-semibold mb-4">
+            <p class="text-center text-xl font-semibold m-6">
                 <strong>Mi Princesa</strong>
+                <br>
                 Me encantaría invitarte a una cena especial esta noche pasaré por ti a tu ofi a las 6:30. Quiero disfrutar de una velada juntos y hacerte sentir lo especial que eres para mí.
     
             </p>
-            <h3 class="text-3xl font-black mb-4">
+            <h3 class="text-3xl font-black m-6">
                 Con mucho amor,
                 <br>
                 Nico
             </h3>
         </div>
+        <button 
+        class="p-2 bg-rose-400 text-white font-black rounded-lg"
+        ><a href="/">VOLVER</a></button>
     </main>
 </Layout>
