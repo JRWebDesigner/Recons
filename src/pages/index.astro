@@ -155,21 +155,20 @@ import Cards from "../components/Cards.astro";
 			cards[i].classList.remove("hidden");
 			cards[i].classList.add("flex");
 			cards[i].classList.add("CardsAparece");
+			for (let index = 0; index < quieres.classList.length; index++) {
+				const element = quieres.classList[index];
+				if(element === 'flex'){
 
+				}
+			}
 			if (i === 0) {
 				anterior.classList.add("hidden");
 			}
 			if (i === 7) {
 				siguiente.classList.remove("hidden");
-
 				tequiero.classList.add("hidden");
-				quieres.addEventListener("click", () => {
-					quieres.classList.add("hidden");
-					cards[i].classList.add("hidden");
-					cards[i].classList.remove("flex");
-					console.log(i);
-					tequiero.classList.remove("hidden");
-				});
+				quieres.classList.add('hidden')
+				
 			}
 			if (i === 8) {
 				tequiero.classList.add("hidden");
