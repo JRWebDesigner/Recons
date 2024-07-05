@@ -5,6 +5,7 @@ import Cards from "../components/Cards.astro";
 
 <Layout>
 	<main class="w-full h-full grid place-items-center">
+		<img id="corazones" class="absolute -z-20 h-full w-full object-cover opacity-50" src="/fondoCorazon.png" alt="fondo corazon">
 		<div class="flex justify-center items-center">
 			<h1 class="text-center text-4xl font-bold text-red-100">
 				PARA MI PRINCESA GABY
@@ -77,6 +78,9 @@ import Cards from "../components/Cards.astro";
 	</main>
 </Layout>
 <style>
+	#corazones{
+		animation: 6s alternate animationPrincC;
+	}
 	#principal > h1 {
 		animation: 1s alternate animationPrinc;
 	}
@@ -85,6 +89,14 @@ import Cards from "../components/Cards.astro";
 	}
 	.CardsAparece {
 		animation: 2.2s alternate animationPrinc;
+	}
+	@keyframes animationPrincC{
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 0.5;
+		}
 	}
 	@keyframes animationPrinc {
 		from {
